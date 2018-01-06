@@ -31,3 +31,5 @@ config/
 phpunit.xml
 /tests
 yarn.lock
+.gitignore
+.gitattributes

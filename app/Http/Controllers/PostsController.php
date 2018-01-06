@@ -10,6 +10,7 @@ class PostsController extends Controller
     //
     public function index()
     {
+
     	return view('posts.index');
     }
 
@@ -31,7 +32,10 @@ class PostsController extends Controller
     	// $post->title = request('title');
     	// $post->body = request('body');
 
-
+        $this->validate(request(),[
+            'title' => 'required',
+            'body' => 'required'
+        ]);
 
     	// // Save it to the database
     	// $post->save();
